@@ -1,0 +1,3 @@
+GUI Version: Create a Tkinter or Flask-based UI.
+NLP Integration: Use NLTK or spaCy for better text understanding.
+API Version: Convert the chatbot into a REST API using Flask or FastAPI.
