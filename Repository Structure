@@ -1,0 +1,16 @@
+Chatbot-FAQ/
+│── chatbot/
+│   ├── __init__.py
+│   ├── chatbot.py  # Main chatbot logic
+│   ├── responses.py  # Predefined responses
+│── tests/
+│   ├── test_chatbot.py  # Unit tests
+│── docs/
+│   ├── documentation.md  # Detailed project documentation
+│── data/
+│   ├── faq_data.json  # Optional: Store FAQs in JSON
+│── .gitignore
+│── requirements.txt
+│── README.md
+│── LICENSE
+│── main.py  # Run chatbot
