@@ -1,0 +1,22 @@
+import json
+
+class RuleBasedChatbot:
+    def __init__(self, faq_file="data/faq_data.json"):
+        with open(faq_file, "r", encoding="utf-8") as file:
+            self.faq_data = json.load(file)
+
+    def get_response(self, user_input):
+        user_input = user_input.lower()
+        for question, answer in self.faq_data.items():
+            if user_input in question.lower():
+                return answer
+        return "I'm sorry, I don't have an answer to that."
+
+if __name__ == "__main__":
+    chatbot = RuleBasedChatbot()
+    while True:
+        user_query = input("You: ")
+        if user_query.lower() == "exit":
+            print("Chatbot: Goodbye!")
+            break
+        print("Chatbot:", chatbot.get_response(user_query))
