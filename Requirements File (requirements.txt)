@@ -1,0 +1,4 @@
+The project has dependencies, list them in requirements.txt. For a basic chatbot, this may be:
+
+json
+(If you're not using external libraries, you can skip this file.)
