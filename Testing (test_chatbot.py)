@@ -1,0 +1,24 @@
+ add unit tests to check if the chatbot is working as expected.
+
+import unittest
+from chatbot.chatbot import RuleBasedChatbot
+
+class TestChatbot(unittest.TestCase):
+    def setUp(self):
+        self.chatbot = RuleBasedChatbot("data/faq_data.json")
+
+    def test_known_question(self):
+        response = self.chatbot.get_response("What is your name?")
+        self.assertEqual(response, "I am a simple chatbot designed to answer FAQs.")
+
+    def test_unknown_question(self):
+        response = self.chatbot.get_response("What is AI?")
+        self.assertEqual(response, "I'm sorry, I don't have an answer to that.")
+
+if __name__ == "__main__":
+    unittest.main()
+Run the tests using:
+
+bash
+
+python -m unittest tests/test_chatbot.py
